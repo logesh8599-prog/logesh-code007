@@ -1,218 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Turbo Drive Fest</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #111;
-        color: white;
-    }
 
-    header {
-        background: rgb(32, 32, 32);
-        padding: 15px;
-        text-align: center;
-        border-bottom: 3px solid red;
-    }
+body{
+margin:0;
+font-family:Arial;
+}
 
-    header h1 {
-        color: red;
-        margin: 0;
-        font-size: 40px;
-    }
+/* Navigation bar */
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#1f6fb2;
+height:60px;
+}
 
-    nav {
-        text-align: center;
-        background: #222;
-        padding: 10px;
-    }
+/* Left side (logo + text) */
+.nav-left{
+display:flex;
+align-items:center;
+color:white;
+font-size:18px;
+font-weight:bold;
+padding-left:15px;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 15px;
-        font-size: 18px;
-    }
+/* Logo */
+.nav-left img{
+height:35px;
+margin-right:10px;
+}
 
-    nav a:hover {
-        color: red;
-    }
+/* Menu button */
+.menu{
+background:#f28c00;
+height:60px;
+width:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+color:white;
+cursor:pointer;
+}
 
-    .hero {
-        background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+/* Sidebar */
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+right:0;
+background:#111;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:60px;
+}
 
-    .hero h2 {
-        font-size: 50px;
-        background: rgba(0,0,0,0.6);
-        padding: 20px;
-        border-radius: 10px;
-    }
+/* Sidebar links */
+.sidebar a{
+padding:12px 20px;
+text-decoration:none;
+font-size:18px;
+color:white;
+display:block;
+}
 
-    .section {
-        padding: 40px;
-        text-align: center;
-    }
+.sidebar a:hover{
+background:#575757;
+}
 
-    .cards {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+/* Close button */
+.closebtn{
+position:absolute;
+top:10px;
+right:20px;
+font-size:30px;
+cursor:pointer;
+}
 
-    .card {
-        background: #222;
-        width: 250px;
-        margin: 15px;
-        padding: 20px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-        background: #333;
-    }
-
-    footer {
-        background: rgb(34, 33, 33);
-        text-align: center;
-        padding: 15px;
-        border-top: 2px solid red;
-    }
-
-    /* LOGIN STYLE */
-    #loginBox {
-        background: #8ed3e4;
-        padding: 30px;
-        width: 300px;
-        margin: 100px auto;
-        text-align: center;
-        border-radius: 10px;
-    }
-
-    #loginBox input {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-    }
-
-    #loginBox button {
-        padding: 10px 20px;
-        background: red;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #message {
-        margin-top: 10px;
-    }
-
-    /* Hide main content initially */
-    #mainContent {
-        display: none;
-    }
 </style>
+
+<script>
+
+function openMenu(){
+document.getElementById("mySidebar").style.width="250px";
+}
+
+function closeMenu(){
+document.getElementById("mySidebar").style.width="0";
+}
+
+</script>
+
 </head>
 
 <body>
 
-<!-- LOGIN PAGE -->
-<div id="loginBox">
-    <h2>Login</h2>
-    <form onsubmit="loginUser(event)">
-        <input type="text" id="userid" placeholder="User ID" required><br>
-        <input type="password" id="password" placeholder="Password" required><br>
-        <button type="submit">Login</button>
-    </form>
-    <p id="message"></p>
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="nav-left">
+<img src="https://www.dotnice.com/media/logo.png">
+NAVIGATION
+</div><br>
+
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+<span class="closebtn" onclick="closeMenu()">×</span>
+<a href="#">Home</a>
+<a href="#">information</a>
+<a href="#">Events</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
 </div>
 
-<!-- MAIN WEBSITE -->
-<div id="mainContent">
+<!-- Navbar -->
+<div class="navbar">
 
-<header>
-    <h1>Turbo Drive Fest</h1>
-    <p>The Ultimate Supercar Experience</p>
-</header>
+  <div class="nav-left">
+NAVIGATION
+</div><br>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-</nav>
 
-<div class="hero">
-    <h2>Welcome to Turbo Drive Fest 🚗🔥</h2>
+<div class="menu" onclick="openMenu()">
+☰
 </div>
 
-<div class="section">
-    <h2>About the Fest</h2>
-    <p>
-        Turbo Drive Fest is an exciting event where car lovers gather to witness
-        stunning supercars, thrilling races, and live shows.
-    </p>
 </div>
+<center>
+<img src="WhatsApp_Image_2026-03-30_at_12.04.08_PM-removebg-preview.png" width="600" height="600">
+</center>
 
-<div class="section">
-    <h2>Featured Highlights</h2>
+<center>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Supercars</h3>
-            <p>Lamborghini, Ferrari, BMW and more!</p>
-        </div>
+  @ 2026 dotNice international Limited<br>
+     Tutti i diritti riservati</center><br>
 
-        <div class="card">
-            <h3>Live Racing</h3>
-            <p>Feel the thrill of high-speed racing events.</p>
-        </div>
+     <center>
+      <i style="color: #5207ca; margin-right: 10px;" class="fa-brands fa-facebook fa-2x" ></i>
+<i  style="color: blue; margin-right: 10px;" class="fa-brands fa-linkedin-in fa-2x" ></i>
+<i style="color: red; margin-right: 10px;" class="fa-brands fa-twitter fa-2x" ></i>
+<i style="color: yellow; margin-right: 10px;"  class="fa-brands fa-google fa-2x" ></i>
+<i style="color: #1f6fb2; margin-right: 10px;" class="fa-brands fa-telegram fa-2x"></i>
+     </center><br>
 
-        <div class="card">
-            <h3>Music & Fun</h3>
-            <p>Enjoy live DJ, food stalls, and entertainment.</p>
-        </div>
-    </div>
-</div>
+   <center>
+     offerte di lavoro      termini     contatti </center>
 
-<footer>
-    <p>© 2026 Turbo Drive Fest | All Rights Reserved</p>
-</footer>
-
-</div>
-
-<!-- JAVASCRIPT -->
-<script>
-function loginUser(event) {
-    event.preventDefault();
-
-    let user = document.getElementById("userid").value;
-    let pass = document.getElementById("password").value;
-
-    // Default login
-    if(user === "logesh" && pass === "1234") {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("mainContent").style.display = "block";
-    } else {
-        document.getElementById("message").innerHTML = "Invalid Login ❌";
-        document.getElementById("message").style.color = "red";
-    }
-}
-</script>
 
 </body>
 </html>
