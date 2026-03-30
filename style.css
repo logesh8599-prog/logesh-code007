@@ -1,0 +1,167 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.banner-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.banner:first-child {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(245, 240, 240, 0.932);
+    color: rgb(31, 30, 30);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: black;
+}
+
+
+.grid-container
+        {
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:15px;
+            background-color: rgb(149, 241, 121);
+            padding:20px;
+        }
+        .grid-item
+        {
+            background-color: antiquewhite;
+            padding:30px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+
+
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: white;
+    }
+
+    header {
+        background: black;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 3px solid red;
+    }
+
+    header h1 {
+        color: red;
+        margin: 0;
+        font-size: 40px;
+    }
+
+    nav {
+        text-align: center;
+        background: #222;
+        padding: 10px;
+    }
+
+    nav a {
+        color: rgb(250, 245, 245);
+        text-decoration: none;
+        margin: 15px;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        color: red;
+    }
+
+    .hero {
+        background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 50px;
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .section {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: #222;
+        width: 250px;
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        background: #333;
+    }
+
+    footer {
+        background: black;
+        text-align: center;
+        padding: 15px;
+        border-top: 2px solid red;
+    }
+
+    body {
+        background-color: rgb(132, 219, 233);
+        color: black;
+    }
+
+    button {
+        background-color: darkred;
+        color: white;
+        padding: 10px;
+    }
+
+
+
+    
